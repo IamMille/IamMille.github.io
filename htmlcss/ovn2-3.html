@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic naming</title>
+    <script type="text/javascript" async>
+        document.title = window.location.pathname.split("/").pop();
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="author" content="SB">
+    <style>
+        html {
+            background-color: dimgray;
+            width: 400px;
+        }
+
+        table {
+            border: 2px solid grey;
+            width: 350px;
+            background-color: #ECF5D0;
+        }
+
+        th {
+            background-color: #F4D987;
+            border: 2px dashed #8F531A;
+        }
+
+        tr:nth-child(2) td:nth-child(3) {
+            background-color: gold;
+        }
+
+        tr:nth-child(3) td:nth-child(3) {
+            background-color: silver;
+        }
+
+        tr:nth-child(4) td:nth-child(3) {
+            background-color: saddlebrown;
+        }
+        /* ---------------------------------------- */
+
+        td {
+            border: 2px dashed grey;
+            padding: 5px;
+        }
+
+        td:nth-child(3) {
+            text-align: center;
+        }
+
+        td:nth-child(4) {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- https://drive.google.com/file/d/0B6f5ao4RFptGVFZlTHZrR3AtY3M/view -->
+    <h1>Övning 2.3</h1>
+    <img src="https://docs.google.com/uc?id=0B6f5ao4RFptGVFZlTHZrR3AtY3M" height="200px">
+    <p><a href="/index.html">Back to index, please</a></p>
+    <hr>
+
+    <table>
+        <caption>
+            Frukter 2016
+        </caption>
+        <tr>
+            <th>Frukt</th>
+            <th>Längd</th>
+            <th>Placering</th>
+            <th>Land</th>
+        </tr>
+
+        <tr>
+            <td>Banan</td>
+            <td>20 cm</td>
+            <td class="medal">1</td>
+            <td>Afrika</td>
+        </tr>
+        <tr>
+            <td>Päron</td>
+            <td>8 cm</td>
+            <td class="medal">2</td>
+            <td>Frankrike</td>
+        </tr>
+        <tr>
+            <td>Äpple</td>
+            <td>5 cm</td>
+            <td class="medal">3</td>
+            <td>Sverige</td>
+        </tr>
+        <tr>
+            <td>Tomat</td>
+            <td>4 cm</td>
+            <td class="medal">4</td>
+            <td>Spanien</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

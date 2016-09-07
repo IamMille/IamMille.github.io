@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>My Page</title>
-    <meta charset="utf-8"/>
+    <title>Dynamic naming</title>
+    <script type="text/javascript" async>
+        document.title = window.location.pathname.split("/").pop();
+    </script>
+
+    <meta charset="utf-8" />
     <meta name="author" content="SB">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+        html {
+            background-color: dimgray;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>Welcome</h1>
-<h2>About</h2>
-<p>On this page I'll show some of the features of HTML</p>
-<h2>Usage</h2>
-<p>
-    Here are some tags:
-    <b>bold</b>
-    <i>italic</i>
-    <em>em</em>
-</p>
+    <h1>Welcome</h1>
+    <h2>About</h2>
+    <p>On this page I'll show some of the features of HTML</p>
+    <h2>Usage</h2>
+    <p>
+        Here are some tags:
+        <b>bold</b>
+        <i>italic</i>
+        <em>em</em>
+    </p>
 
-<h2>Image</h2>
-<p>Here is a image found on: http://www.sololearn.com/Uploads/html-css.jpg<br>
-    Click the image to see it at it's URL</p>
+    <h2>Image</h2>
+    <p>Here is a image found on: http://www.sololearn.com/Uploads/html-css.jpg
+        <br> Click the image to see it at it's URL</p>
 
-<a href="http://www.sololearn.com/Uploads/html-css.jpg">
-    <img src="http://www.sololearn.com/Uploads/html-css.jpg">
-</a>
+    <a href="http://www.sololearn.com/Uploads/html-css.jpg">
+        <img src="http://www.sololearn.com/Uploads/html-css.jpg">
+    </a>
 </body>
+
 </html>

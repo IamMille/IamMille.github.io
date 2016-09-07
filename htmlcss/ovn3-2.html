@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic naming</title>
+    <script type="text/javascript" async>
+        document.title = window.location.pathname.split("/").pop();
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="author" content="SB">
+    <style>
+        html {
+            background-color: dimgray;
+            width: 400px;
+        }
+
+        #one {
+            position: absolute;
+            display: block;
+            background-color: pink;
+            text-align: center;
+            border: 1px solid grey;
+            width: 50px;
+            height: 50px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        #two {
+            position: absolute;
+            display: block;
+            background-color: dodgerblue;
+            text-align: center;
+            border: 1px solid grey;
+            width: 80px;
+            height: 50px;
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+
+        #three {
+            position: absolute;
+            display: block;
+            background-color: grey;
+            text-align: center;
+            border: 1px solid grey;
+            width: 100px;
+            height: 50px;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+
+        #four {
+            position: absolute;
+            display: block;
+            background-color: beige;
+            text-align: center;
+            border: 1px solid grey;
+            width: 60px;
+            height: 80px;
+            margin-left: 20px;
+            margin-top: 90px;
+        }
+
+        #five {
+            position: absolute;
+            display: block;
+            background-color: green;
+            text-align: center;
+            border: 1px solid grey;
+            width: 30px;
+            height: 90px;
+            margin-left: 80px;
+            margin-top: 30px;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Övning 3.2</h1>
+    <img src="https://docs.google.com/uc?id=0B6f5ao4RFptGYkd4alJXNXh3bGs" height="200px">
+    <p><a href="/index.html">Back to index, please</a></p>
+    <hr>
+
+    <div id="one">1</div>
+    <div id="two">2</div>
+    <div id="three">3</div>
+    <div id="four">4</div>
+    <div id="five">5</div>
+</body>
+
+</html>

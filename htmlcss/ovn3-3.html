@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic naming</title>
+    <script type="text/javascript" async>
+        document.title = window.location.pathname.split("/").pop();
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="author" content="SB">
+    <style>
+        html {
+            background-color: dimgray;
+            width: 400px;
+        }
+
+        #table {
+            display: table;
+            border: 2px solid grey;
+            width: 350px;
+            background-color: #ECF5D0;
+            border-spacing: 4px;
+        }
+
+        #caption {
+            width: 350px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .row {
+            display: table-row;
+        }
+
+        .row:nth-child(1) {
+            display: table-row;
+            background-color: #F4D987;
+            border: 2px dashed #8F531A;
+        }
+
+        .row:nth-child(2) .cell:nth-child(3) {
+            background-color: gold;
+        }
+
+        .row:nth-child(3) .cell:nth-child(3) {
+            background-color: silver;
+        }
+
+        .row:nth-child(4) .cell:nth-child(3) {
+            background-color: saddlebrown;
+        }
+        /* ---------------------------------------- */
+
+        .cell {
+            display: table-cell;
+            border: 1px dashed grey;
+            padding: 5px;
+            margin: 100px;
+        }
+
+        .cell:nth-child(3) {
+            text-align: center;
+        }
+
+        .cell:nth-child(4) {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Övning 3.3</h1>
+    <img src="https://docs.google.com/uc?id=0B6f5ao4RFptGVFZlTHZrR3AtY3M" height="200px">
+    <p><a href="/index.html">Back to index, please</a></p>
+    <hr>
+
+    <div id="caption">
+        CSS Tabell
+    </div>
+    <div id="table">
+
+        <div class="row">
+            <div class="cell">Frukt</div>
+            <div class="cell">Längd</div>
+            <div class="cell">Placering</div>
+            <div class="cell">Land</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Banan</div>
+            <div class="cell">20 cm</div>
+            <div class="cell medal">1</div>
+            <div class="cell">Afrika</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Tomat</div>
+            <div class="cell">15 cm</div>
+            <div class="cell medal">2</div>
+            <div class="cell">Spanien</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Tomat</div>
+            <div class="cell">15 cm</div>
+            <div class="cell medal">3</div>
+            <div class="cell">Spanien</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Tomat</div>
+            <div class="cell">15 cm</div>
+            <div class="cell medal">4</div>
+            <div class="cell">Spanien</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
