@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic naming</title>
+    <script type="text/javascript">
+        document.title = window.location.pathname.split("/").pop();
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="author" content="SB">
+    <style>
+        html {
+            background-color: dimgray;
+            width: 100%;
+            text-align: center;
+        }
+
+        main {
+            text-align: center;
+            padding: 5px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        ul li {
+            display: inline;
+        }
+
+        li a {
+            padding: 8px;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid;
+            border-color: ghostwhite;
+            background-color: bisque;
+            border-radius: 4px;
+        }
+
+        li a:hover {
+            background-color: ghostwhite;
+        }
+
+        footer {
+            padding-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 5.3.1 Skapa en webbsida som har minst tre länkar. De ska ligga inuti en lista (ul eller ol) som i sin tur ska ligga inuti ett nav-element. Styla länkarna med CSS så att de ser ut som knappar och kommer på samma rad. -->
+
+    <!-- 5.3.2 Lägg till ett formulär på webbsidan. Tänk dig att det är en del av en webbshop och man fyller i betalningsinformation. Du ska använda formulärelementen input, label, select, textarea och button. Använd CSS för att styla formuläret. Använd minst ett av varje sorts input-element vi har gått igenom. -->
+
+    <h1>Övning 5.4 - Link as buttons + Form elements</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#">button one</a></li>
+            <li><a href="#">another button</a></li>
+            <li><a href="#">the end button</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form oninput="myoutput.value=parseInt(happyrange.value)">
+            <p>
+                <label for="browser">Välj webbläsare:</label>
+                <input list="browsers" id="browser">
+                <datalist id="browsers">
+                    <option value="MSIE">
+                        <option value="Firefox">
+                            <option value="Chrome">
+                                <option value="Opera">
+                                    <option value="Safari">
+                </datalist>
+            </p>
+
+            <p>
+                <label for="security">Välj säkerhetsnivå:</label>
+                <keygen name="security" id="security">
+            </p>
+
+            <p>
+                <label for="happyrange">Glädjemätare:</label>
+                <input type="range" id="happyrange" name="happyrange" value="50">
+                <output name="myoutput" for="happyrange">my placeholder</output>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p><a href="/index.html">Back to index, please</a></p>
+        <p>
+            <a href="http://validator.w3.org/check/referer">Validate HTML</a> |
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+        </p>
+    </footer>
+</body>
+
+</html>
