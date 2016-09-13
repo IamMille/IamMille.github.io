@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Template</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="SB">
+    <script type="text/javascript">
+        document.title = window.location.pathname.split("/").pop();
+    </script>
+    <style>
+        html {
+            background-color: #fff;
+            font-family: sans-serif;
+        }
+        header {
+            background-color: antiquewhite;
+        }
+        header h1 {
+            margin: 0;
+            padding: 10px;
+
+        }
+        #flexdiv {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        nav, article, aside {
+            padding: 10px;
+        }
+        nav, aside {
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: beige;
+            flex: 1;
+        }
+        article {
+            flex: 5;
+            background-color: bisque;
+        }
+
+        article img {
+            float:left;
+            margin: 10px;
+            height: 120px;
+
+        }
+        aside {
+            flex: 1;
+            background-color: azure;
+        }
+
+        #table {
+            display: table;
+            border: 1px solid black;
+            width: 100%;
+        }
+        #table > div {
+            display: table-row;
+        }
+        #table > div > div {
+            display: table-cell;
+            border: 0.5px solid white;
+            padding: 5px;
+        }
+        footer {
+            background-color: bisque;
+        }
+    </style>
+    </head>
+
+    <body>
+
+    <header>
+        <h1>Övning 6</h1>
+    </header>
+
+    <div id="flexdiv">
+        <nav>
+            Navigation
+        </nav>
+        <article>
+            <h2>Övning 6.1 - float</h2>
+            Skapa en webbsida där texten wrappar runt en bild som ligger antingen på höger eller vänster sida i en container (div). Den ska ligga på GitHub.
+
+            <img src="assets/pic.jpg" alt="Abstract" />
+
+            <br><br>
+            2 Lägg till en ny sektion på
+            webbsidan, som har en tabell. Tabellen
+            ska inte skapas med table-elementet
+            utan med display: table.
+            <br><br>
+            3 Lägg till en ny sektion på
+            webbsidan, som efterliknar den vänstra
+            bilden på slide #8. Använd flex.
+
+            <h2>Övning 6.2 - CSS tabell</h2>
+            <div id="table">
+                <div>
+                    <div>cell 1</div>
+                    <div>cell 2</div>
+                </div>
+                <div>
+                    <div>cell 3</div>
+                    <div>cell 4</div>
+                </div>
+            </div>
+
+        </article>
+        <aside>
+            Aside
+        </aside>
+    </div>
+
+    <footer>
+        <p><a href="/index.html">Back to index, please</a></p>
+        <p>
+            <a href="http://validator.w3.org/check/referer">Validate HTML</a> |
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+        </p>
+    </footer>
+</body>
