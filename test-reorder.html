@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Template</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="SB">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" async></script>
+    <script type="text/javascript">
+        document.title = window.location.pathname.split("/").pop();
+    </script>
+    <style>
+        #flexdiv {
+            display: flex;
+            flex-direction: column;
+        }
+        #flexdiv > div {
+            background-color: aquamarine;
+            width: 60px;
+            height: 50px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            order: 1;
+        }
+
+    </style>
+    <body onload="myFunction()">
+
+    <h1>Test-reorder</h1>
+
+    <input type="button" onclick="addelm()" value="Add box" />
+
+    <script type="text/javascript">
+    var counter = 1;
+
+    function addelm() {
+        var flexdiv = document.getElementById('flexdiv');
+
+        var newelm  = document.createElement('div');
+        newelm.style.order = counter * 1000; counter++;
+        newelm.style.backgroundColor = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+
+        flexdiv.appendChild(newelm);
+    }
+
+    function myFunction() {
+        for (i = 0; i < 5; i++) {
+         //addelm();
+        }
+    }
+    </script>
+
+    <main>
+        <div id="flexdiv">
+            <div style="background-color:#ebd0e8; order: 1"></div>
+            <div style="background-color:#c6e2e2; order: 2"></div>
+            <div style="background-color:rgba(255, 0, 0, 0.19); order: 3">
+                <input type="button" onclick="this.parentElement.style.order =
+                this.parentElement.previousSibling.style.order*1-1;" value="+" />
+                <input type="button" onclick="this.parentElement.style.order =
+                this.parentElement.nextSibling.style.order*1+1;" value="-" />
+            </div>
+            <div style="background-color:#d7c6e2; order: 4"></div>
+            <div style="background-color:#dfe2c6; order: 5"></div>
+        </div>
+    </main>
+    <footer>
+        <p><a href="/index.html">Back to index, please</a></p>
+        <p>
+            <a href="http://validator.w3.org/check/referer">Validate HTML</a> |
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+        </p>
+    </footer>
+
+</body>
+</head>
